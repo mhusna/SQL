@@ -1,0 +1,76 @@
+--------------------------------------------------------
+--  File created - Pazartesi-Mayýs-29-2023   
+--------------------------------------------------------
+-- DROP TABLE ORA_COUNTRIES;
+-- DROP TABLE COUNTRIES;
+--------------------------------------------------------
+--  DDL for Table ORA_COUNTRIES
+--------------------------------------------------------
+
+  CREATE TABLE ORA_COUNTRIES
+   (	"COUNTRY_ID" CHAR(2 BYTE), 
+	"COUNTRY_NAME" VARCHAR2(40 BYTE), 
+	"REGION_ID" NUMBER, 
+	 CONSTRAINT "COUNTRY_C_ID_PK" PRIMARY KEY ("COUNTRY_ID") ENABLE
+   ) ORGANIZATION INDEX NOCOMPRESS PCTFREE 10 INITRANS 2 MAXTRANS 255 LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ PCTTHRESHOLD 50;
+
+   COMMENT ON COLUMN ORA_COUNTRIES."COUNTRY_ID" IS 'Primary key of ORA_COUNTRIES table.';
+   COMMENT ON COLUMN ORA_COUNTRIES."COUNTRY_NAME" IS 'Country name';
+   COMMENT ON COLUMN ORA_COUNTRIES."REGION_ID" IS 'Region ID for the country. Foreign key to region_id column in the departments table.';
+   COMMENT ON TABLE ORA_COUNTRIES  IS 'country table. Contains 25 rows. References with locations table.';
+REM INSERTING into ORA_COUNTRIES
+-- SET DEFINE OFF;
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('AR','Argentina','2');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('AU','Australia','3');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('BE','Belgium','1');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('BR','Brazil','2');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('CA','Canada','2');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('CH','Switzerland','1');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('CN','China','3');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('DE','Germany','1');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('DK','Denmark','1');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('EG','Egypt','4');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('FR','France','1');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('IL','Israel','4');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('IN','India','3');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('IT','Italy','1');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('JP','Japan','3');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('KW','Kuwait','4');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('ML','Malaysia','3');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('MX','Mexico','2');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('NG','Nigeria','4');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('NL','Netherlands','1');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('SG','Singapore','3');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('UK','United Kingdom','1');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('US','United States of America','2');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('ZM','Zambia','4');
+Insert into ORA_COUNTRIES (COUNTRY_ID,COUNTRY_NAME,REGION_ID) values ('ZW','Zimbabwe','4');
+--------------------------------------------------------
+--  DDL for Index COUNTRY_C_ID_PK
+--------------------------------------------------------
+/*
+  CREATE UNIQUE INDEX "COUNTRY_C_ID_PK" ON ORA_COUNTRIES ("COUNTRY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+  */
+--------------------------------------------------------
+--  Constraints for Table ORA_COUNTRIES
+--------------------------------------------------------
+/*  ALTER TABLE ORA_COUNTRIES ADD CONSTRAINT "COUNTRY_C_ID_PK" PRIMARY KEY ("COUNTRY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE ORA_COUNTRIES MODIFY ("COUNTRY_ID" CONSTRAINT "COUNTRY_ID_NN" NOT NULL ENABLE);*/
+--------------------------------------------------------
+--  Ref Constraints for Table ORA_COUNTRIES
+--------------------------------------------------------
+
+  ALTER TABLE ORA_COUNTRIES ADD CONSTRAINT "COUNTR_REG_FK" FOREIGN KEY ("REGION_ID")
+	  REFERENCES "ORA_REGIONS" ("REGION_ID") ENABLE;

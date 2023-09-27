@@ -1,0 +1,22 @@
+--------------------------------------------------------
+--  File created - Pazar-Mayýs-14-2023   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table CUSTOMERSJOIN
+--------------------------------------------------------
+
+  CREATE TABLE "CUSTOMERSJOIN" 
+   (	"CUSTOMERID" NUMBER, 
+	"CITYID" NUMBER, 
+	"CUSTOMERNAME" VARCHAR2(100 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+REM INSERTING into CUSTOMERSJOIN
+SET DEFINE OFF;
+Insert into CUSTOMERSJOIN (CUSTOMERID,CITYID,CUSTOMERNAME) values ('1','1','Bob Smith');
+Insert into CUSTOMERSJOIN (CUSTOMERID,CITYID,CUSTOMERNAME) values ('2','1','Sally Smith');
+Insert into CUSTOMERSJOIN (CUSTOMERID,CITYID,CUSTOMERNAME) values ('3','2','Tom Smith');
+Insert into CUSTOMERSJOIN (CUSTOMERID,CITYID,CUSTOMERNAME) values ('4',null,'Mary Smith');
