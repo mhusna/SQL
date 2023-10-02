@@ -122,6 +122,8 @@ Select Distinct
 From Sales_Customers
 Order By 1;
 
+-- #################################################################
+
 Select Count(Country) as Sayi
 From Sales_Customers;
 
@@ -390,7 +392,7 @@ From A
 Where rownum < 6
 Order By orderdate, orderid;
 
---
+-- ###################################################################
 
 Select 
     orderid,

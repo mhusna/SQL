@@ -1,0 +1,10 @@
+@"C:\Users\mehme\Desktop\SQL\notlar\26-09-2023\SQLDATATABLES_Noktali\1- CityJoin.sql";
+@"C:\Users\mehme\Desktop\SQL\notlar\26-09-2023\SQLDATATABLES_Noktali\2- CustomerJoin.sql";
+@"C:\Users\mehme\Desktop\SQL\notlar\26-09-2023\SQLDATATABLES_Noktali\3- Customers.sql";
+@"C:\Users\mehme\Desktop\SQL\notlar\26-09-2023\SQLDATATABLES_Noktali\4- HR_Employees.sql";
+@"C:\Users\mehme\Desktop\SQL\notlar\26-09-2023\SQLDATATABLES_Noktali\5- Production_Supliers.sql";
+@"C:\Users\mehme\Desktop\SQL\notlar\26-09-2023\SQLDATATABLES_Noktali\6- Production_Category.sql";
+@"C:\Users\mehme\Desktop\SQL\notlar\26-09-2023\SQLDATATABLES_Noktali\7- Production_Products.sql";
+@"C:\Users\mehme\Desktop\SQL\notlar\26-09-2023\SQLDATATABLES_Noktali\8- Sales_Shippers.sql";
+@"C:\Users\mehme\Desktop\SQL\notlar\26-09-2023\SQLDATATABLES_Noktali\9- Sales_Orders.sql";
+@"C:\Users\mehme\Desktop\SQL\notlar\26-09-2023\SQLDATATABLES_Noktali\10- Sales_OrderDetails.sql";
