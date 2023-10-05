@@ -318,9 +318,9 @@ select
       to_char (to_date('12-05-2023','DD/MM/YYYY'), 'FmDay', 'nls_date_language=turkish'),
       case to_char (to_date('12-05-2023','DD/MM/YYYY'), 'FmDay', 'nls_date_language=turkish')
           when 'Pazartesi' then 1
-          when 'Sali' then 2
-          when 'Carsamba' then 3
-          when 'Persembe' then 4
+          when 'Sal?' then 2
+          when 'Çar?amba' then 3
+          when 'Per?embe' then 4
           when 'Cuma' then 5
           when 'Cumartesi' then 6
           when 'Pazar' then 7
