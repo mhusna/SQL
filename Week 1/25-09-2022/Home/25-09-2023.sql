@@ -21,7 +21,7 @@ From hr.employees
 Where job_id = 'IT_PROG';
 
 -- Istedigimiz sutuna gore verileri gruplamak icin GROUP BY kullaniriz.
--- GROUP BY ifadesinde hangi sutuna / sutunlara gore gruplama yap?yorsak SELECT ifadesinde de o kullanilmali.
+-- GROUP BY ifadesinde hangi sutuna / sutunlara gore gruplama yapiyorsak SELECT ifadesinde de o kullanilmali.
 -- GROUP BY ifadesinden gelen sanal tabloyu filtrelemek icin HAVING ifadesi kullanilir.
 -- HAVING'de alias kullanilamaz, fakat ORDER BY'da kullanilabilir.
 Select
